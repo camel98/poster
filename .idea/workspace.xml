@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2588db6-17c9-401b-a52a-1784e78afe3b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core.go" beforeDir="false" afterPath="$PROJECT_DIR$/core/core.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/background_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/background_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/end_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/end_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/handler_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/image_circle_local_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/image_circle_local_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/image_circle_remote_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/image_circle_remote_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/image_local_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/image_local_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/image_remote_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/image_remote_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/qrcode_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/qrcode_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/text_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/text_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-    </list>
+    <list default="true" id="e2588db6-17c9-401b-a52a-1784e78afe3b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

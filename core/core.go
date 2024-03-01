@@ -12,6 +12,7 @@ import (
 	"bytes"
 	"github.com/camel98/go-qrcode"
 	"github.com/golang/freetype"
+	"github.com/golang/freetype/truetype"
 	"image"
 	"image/color"
 	"image/draw"
