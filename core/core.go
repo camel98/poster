@@ -10,9 +10,8 @@ package core
 
 import (
 	"bytes"
+	"github.com/camel98/go-qrcode"
 	"github.com/golang/freetype"
-	"github.com/golang/freetype/truetype"
-	"github.com/skip2/go-qrcode"
 	"image"
 	"image/color"
 	"image/draw"
@@ -22,7 +21,7 @@ import (
 	"os"
 )
 
-//新PNG载体
+// 新PNG载体
 type Rect struct {
 	X0 int
 	X1 int
@@ -30,20 +29,20 @@ type Rect struct {
 	Y1 int
 }
 
-//坐标
+// 坐标
 type Pt struct {
 	X int
 	Y int
 }
 
-//图片切片
+// 图片切片
 type DImage struct {
 	PNG draw.Image //合并到的PNG切片,可用image.NewrRGBA设置
 	X   int        //横坐标
 	Y   int        //纵坐标
 }
 
-//文字切片
+// 文字切片
 type DText struct {
 	PNG   draw.Image //合并到的PNG切片,可用image.NewrRGBA设置
 	Title string     //文字
@@ -56,7 +55,7 @@ type DText struct {
 	A     uint8
 }
 
-//新建文件载体
+// 新建文件载体
 func NewMerged(path string) (*os.File, error) {
 	f, err := os.Create(path)
 	if err != nil {
@@ -65,17 +64,17 @@ func NewMerged(path string) (*os.File, error) {
 	return f, nil
 }
 
-//新建图片载体
+// 新建图片载体
 func NewPNG(X0 int, Y0 int, X1 int, Y1 int) *image.RGBA {
 	return image.NewRGBA(image.Rect(X0, Y0, X1, Y1))
 }
 
-//合并图片到载体
+// 合并图片到载体
 func MergeImage(PNG draw.Image, image image.Image, imageBound image.Point) {
 	draw.Draw(PNG, PNG.Bounds(), image, imageBound, draw.Over)
 }
 
-//读取字体类型
+// 读取字体类型
 func LoadTextType(path string) (*truetype.Font, error) {
 	fbyte, err := ioutil.ReadFile(path)
 	if err != nil {
@@ -88,7 +87,7 @@ func LoadTextType(path string) (*truetype.Font, error) {
 	return trueTypeFont, nil
 }
 
-//创建新字体切片
+// 创建新字体切片
 func NewDrawText(png draw.Image) *DText {
 	return &DText{
 		PNG:  png,
@@ -102,14 +101,14 @@ func NewDrawText(png draw.Image) *DText {
 	}
 }
 
-//设置字体颜色
+// 设置字体颜色
 func (dtext *DText) SetColor(R uint8, G uint8, B uint8) {
 	dtext.R = R
 	dtext.G = G
 	dtext.B = B
 }
 
-//合并字体到载体
+// 合并字体到载体
 func (dtext *DText) MergeText(title string, size float64, tf *truetype.Font, x int, y int) error {
 	fc := freetype.NewContext()
 	//设置屏幕每英寸的分辨率
@@ -133,7 +132,7 @@ func (dtext *DText) MergeText(title string, size float64, tf *truetype.Font, x i
 	return nil
 }
 
-//合并到图片
+// 合并到图片
 func Merge(png draw.Image, merged *os.File) error {
 	err := jpeg.Encode(merged, png, nil)
 	if err != nil {
@@ -142,7 +141,7 @@ func Merge(png draw.Image, merged *os.File) error {
 	return nil
 }
 
-//获取二维码图像
+// 获取二维码图像
 func DrawQRImage(url string, level qrcode.RecoveryLevel, size int) (image.Image, error) {
 	newQr, err := qrcode.New(url, level)
 	if err != nil {

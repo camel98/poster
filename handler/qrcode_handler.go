@@ -10,8 +10,7 @@ package handler
 
 import (
 	"fmt"
-	"github.com/hitailang/poster/core"
-	"github.com/skip2/go-qrcode"
+	"github.com/camel98/poster/core"
 	"image"
 )
 
