@@ -10,6 +10,7 @@ package handler
 
 import (
 	"fmt"
+	"github.com/camel98/go-qrcode"
 	"github.com/camel98/poster/core"
 	"image"
 )
